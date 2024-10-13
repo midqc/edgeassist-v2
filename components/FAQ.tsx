@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 interface FAQItem {
   question: string;
@@ -89,9 +90,15 @@ const FAQItem: React.FC<{ item: FAQItem; isLast: boolean }> = ({
           )}
         </span>
       </button>
-      <div className={`mt-2 text-gray-600 ${isOpen ? 'block' : 'hidden'}`}>
-        {item.answer}
-      </div>
+      <motion.div
+        className="mt-2 text-gray-600"
+        initial={{ height: 0, opacity: 0 }}
+        animate={isOpen ? { height: 'auto', opacity: 1 } : { height: 0, opacity: 0 }}
+        transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }}
+        style={{ overflow: 'hidden' }}
+      >
+        <p>{item.answer}</p>
+      </motion.div>
     </div>
   );
 };
