@@ -76,7 +76,8 @@ export default function WhatWeDo() {
             <img
               src={feature.image}
               alt={`${feature.title} icon`}
-              className="w-24 h-24 mb-4"
+              className="w-24 h-24 mb-4 object-contain"
+              style={{ aspectRatio: '1 / 1' }}
             />
             <h3 className="text-xl font-medium mb-2 text-blue-600 text-center">
               {feature.title}
