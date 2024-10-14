@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import Image from 'next/image';
 
 export default function WhatWeDo() {
   const [isVisible, setIsVisible] = useState(false);
@@ -14,12 +15,15 @@ export default function WhatWeDo() {
         }
       });
     });
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+
+    const currentSection = sectionRef.current;
+    if (currentSection) {
+      observer.observe(currentSection);
     }
+
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
+      if (currentSection) {
+        observer.unobserve(currentSection);
       }
     };
   }, []);
@@ -28,33 +32,32 @@ export default function WhatWeDo() {
     {
       title: 'Plagiarism-Free Guarantee',
       description: '100% original content, passing all plagiarism checks.',
-      image: '/images/plagiarism.png', // path to your plagiarism image
+      image: '/images/plagiarism.png',
     },
     {
       title: 'AI Detection Bypass',
       description: 'Human-written content that bypasses AI detection systems.',
-      image: '/images/ai-bypass.png', // example placeholder for AI detection
+      image: '/images/ai-bypass.png',
     },
     {
       title: 'Personalized Services',
       description: 'Customized projects aligned with your academic goals.',
-      image: '/images/personalized.png', // example placeholder for personalized services
+      image: '/images/personalized.png',
     },
     {
       title: 'Confidentiality Assured',
-      description:
-        'Your privacy is our top priority, ensuring secure handling of your details.',
-      image: '/images/confidentiality.png', // example placeholder for confidentiality
+      description: 'Your privacy is our top priority, ensuring secure handling of your details.',
+      image: '/images/confidentiality.png',
     },
     {
       title: 'Expert Team',
       description: 'Experienced professionals across various disciplines.',
-      image: '/images/expert-team.png', // example placeholder for expert team
+      image: '/images/expert-team.png',
     },
     {
       title: 'Timely Delivery',
       description: 'Meeting deadlines, whether tight or flexible.',
-      image: '/images/timely-delivery.png', // example placeholder for timely delivery
+      image: '/images/timely-delivery.png',
     },
   ];
 
@@ -73,11 +76,12 @@ export default function WhatWeDo() {
             key={index}
             className="bg-gray-50 p-6 rounded-xl flex flex-col justify-between items-center"
           >
-            <img
+            <Image
               src={feature.image}
               alt={`${feature.title} icon`}
+              width={96}
+              height={96}
               className="w-24 h-24 mb-4 object-contain"
-              style={{ aspectRatio: '1 / 1' }}
             />
             <h3 className="text-xl font-medium mb-2 text-blue-600 text-center">
               {feature.title}

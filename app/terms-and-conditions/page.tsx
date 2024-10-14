@@ -8,17 +8,17 @@ export default function TermsAndConditions() {
 
         <section className="mb-6">
           <h2 className="text-2xl font-medium mb-2">General Usage Policy</h2>
-          <p>By accessing and using EdgeAssist's services, users agree to comply with these Terms and Conditions. If you do not agree to these terms, you may not use our services.</p>
+          <p>By accessing and using EdgeAssist&apos;s services, users agree to comply with these Terms and Conditions. If you do not agree to these terms, you may not use our services.</p>
         </section>
 
         <section className="mb-6">
           <h2 className="text-2xl font-medium mb-2">User Rights and Responsibilities</h2>
-          <p>Users are responsible for providing accurate information when using the services. Users must also adhere to all applicable laws and regulations while using EdgeAssist's services.</p>
+          <p>Users are responsible for providing accurate information when using the services. Users must also adhere to all applicable laws and regulations while using EdgeAssist&apos;s services.</p>
         </section>
 
         <section className="mb-6">
           <h2 className="text-2xl font-medium mb-2">Intellectual Property</h2>
-          <p>All content, trademarks, and other intellectual property associated with EdgeAssist's services are owned by EdgeAssist. Users may not reproduce or distribute any content without prior written permission.</p>
+          <p>All content, trademarks, and other intellectual property associated with EdgeAssist&apos;s services are owned by EdgeAssist. Users may not reproduce or distribute any content without prior written permission.</p>
         </section>
 
         <section className="mb-6">
