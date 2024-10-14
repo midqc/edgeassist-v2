@@ -6,7 +6,7 @@ export default function HeroSection() {
       <div className="w-full text-center">
         <div className="scale-100">
           <Image
-            src="/logo.svg"
+            src="/logo-outline.svg"
             alt="Edge Assist Logo"
             width={200}
             height={100}
