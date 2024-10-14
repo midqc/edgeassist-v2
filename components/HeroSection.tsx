@@ -9,7 +9,7 @@ export default function HeroSection() {
             src="/logo-outline.svg"
             alt="Edge Assist Logo"
             width={200}
-            height={100}
+            height={90}
             className="mx-auto mb-6"
           />
         </div>

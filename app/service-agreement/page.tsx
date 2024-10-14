@@ -28,7 +28,7 @@ export default function ServiceAgreement() {
 
         <section className="mb-6">
           <h2 className="text-2xl font-medium mb-2">Intellectual Property and Plagiarism</h2>
-          <p>EdgeAssist guarantees that all work produced is original and free from plagiarism. However, clients are responsible for ensuring the ethical use of the provided work in accordance with their institution's policies on academic integrity. EdgeAssist does not endorse or condone academic dishonesty. Any request for work that directly violates academic integrity policies will be refused.</p>
+          <p>EdgeAssist guarantees that all work produced is original and free from plagiarism. However, clients are responsible for ensuring the ethical use of the provided work in accordance with their institution&apos;s policies on academic integrity. EdgeAssist does not endorse or condone academic dishonesty. Any request for work that directly violates academic integrity policies will be refused.</p>
         </section>
 
         <section className="mb-6">
