@@ -81,7 +81,7 @@ export default function WhatWeDo() {
               alt={`${feature.title} icon`}
               width={96}
               height={96}
-              className="w-24 h-24 mb-4 object-contain"
+              className="w-12 h-12 mb-4 object-contain"
             />
             <h3 className="text-xl font-medium mb-2 text-blue-600 text-center">
               {feature.title}
