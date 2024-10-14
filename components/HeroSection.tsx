@@ -4,7 +4,7 @@ export default function HeroSection() {
   return (
     <main className="flex flex-col max-w-2xl items-center justify-center mx-auto rounded-3xl shadow-2xl bg-white p-8">
       <div className="w-full text-center">
-        <div className="scale-100">
+        <div className="">
           <Image
             src="/logo-outline.svg"
             alt="Edge Assist Logo"
