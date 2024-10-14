@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'EdgeAssist',
-  description: '',
+  description: 'Get expert support for assignments, projects, and papers. Tailored solutions, fast delivery, and 100% original work.',
 };
 
 export default function RootLayout({
