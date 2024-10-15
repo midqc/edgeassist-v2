@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function ServiceAgreement() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-neutral-100 to-neutral-200 py-6 flex flex-col items-center justify-center">
-      <main className="max-w-4xl mx-auto rounded-3xl shadow-2xl bg-white p-8">
+      <main className="max-w-2xl mx-auto rounded-3xl shadow-2xl bg-white p-8">
         <h1 className="text-3xl font-medium mb-6 text-blue-600">
           EdgeAssist Service Agreement
         </h1>

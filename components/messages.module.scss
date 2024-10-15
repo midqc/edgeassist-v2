@@ -1,0 +1,105 @@
+$list: (
+  --sentColor: #0b93f6,
+  --receiveColor: #e5e5ea,
+  --bg: #fff
+);
+
+.list {
+  @each $property, $value in $list {
+    #{$property}: $value;
+  }
+
+  display: flex;
+  flex-direction: column;
+  max-width: 450px; // You can adjust this width if needed
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+[data-theme='dark'] {
+  .list {
+    --bg: #161515;
+  }
+}
+
+.shared {
+  position: relative;
+  max-width: 70%; // Adjusted for more space (previously was 255px)
+  margin-bottom: 15px;
+  padding: 10px 20px; // Increased padding for more space inside the bubbles
+  line-height: 1.5; // Adjusted line height for better readability
+  word-wrap: break-word;
+  border-radius: 25px;
+
+  &:before {
+    width: 20px;
+  }
+
+  &:after {
+    width: 26px;
+    background-color: var(--bg);
+  }
+
+  &:before,
+  &:after {
+    position: absolute;
+    bottom: 0;
+    height: 25px;
+    content: '';
+  }
+}
+
+.sent {
+  align-self: flex-end;
+  color: white;
+  background: var(--sentColor);
+
+  &:before {
+    right: -7px;
+    background-color: var(--sentColor);
+    border-bottom-left-radius: 16px 14px;
+  }
+
+  &:after {
+    right: -26px;
+    border-bottom-left-radius: 10px;
+  }
+}
+
+.received {
+  align-self: flex-start;
+  color: black;
+  background: var(--receiveColor);
+
+  &:before {
+    left: -7px;
+    background-color: var(--receiveColor);
+    border-bottom-right-radius: 16px 14px;
+  }
+
+  &:after {
+    left: -26px;
+    border-bottom-right-radius: 10px;
+  }
+}
+
+.noTail {
+  margin-bottom: 2px;
+  border-radius: 9999px; // Fully rounded corners
+  padding: 0 16px; // Remove vertical padding, keep horizontal padding
+  height: 32px; // Set a fixed height for single-line messages
+  display: flex;
+  align-items: center; // Vertically center the content
+
+  &:before,
+  &:after {
+    display: none; // Hide tail elements completely
+  }
+}
+
+// Adjust the font size and line height for text inside noTail messages
+.noTail span {
+  font-size: 16px; // Adjust this value as needed
+  line-height: 1; // Remove any additional line height
+}

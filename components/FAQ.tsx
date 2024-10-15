@@ -119,7 +119,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="flex flex-col max-w-4xl w-full mx-auto rounded-3xl shadow-2xl bg-white p-8">
+    <section className="flex flex-col max-w-3xl w-full mx-auto rounded-3xl shadow-2xl bg-white p-8">
       <h2 className="text-3xl font-medium mb-6 text-center">
         Frequently Asked Questions
       </h2>
