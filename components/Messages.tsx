@@ -6,11 +6,11 @@ import cn from "classnames";
 import styles from "./messages.module.scss";
 
 const messages = [
-  { text: "Hey, why should I pick *you*? 😒", sent: true },
+  { text: "Hey, Why should I pick YOU? 😒", sent: true },
   {
-    text: "We’re all about 100% original work, crafted by real people, not bots.",
+    text: "We’re all about 100% original work. Crafted by real people, no bots",
   },
-  { text: "That sounds good! How do I know it’s personalized?", sent: true },
+  { text: "How do I know it’s personalized?", sent: true },
   {
     text: "Every piece is tailored just for you. Your secrets? Safe with us! 👀",
   },
@@ -18,20 +18,20 @@ const messages = [
   {
     text: "Absolutely! We’re all about punctuality—no stress about deadlines!",
   },
-  { text: "Alright, I’m interested! Where do I start? 😊", sent: true },
+  { text: "Alright, Where do I start?", sent: true },
   {
     text: (
       <span>
-        Just fill out the form{" "}
+        Just fill out the{" "}
         <a
           href="https://forms.gle/oYUzB4PSu7YKFB8q7"
           target="_blank"
           rel="noopener noreferrer"
           className="text-blue-600 underline"
         >
-          here
+          form
         </a>
-        , and we’ll take it from there! Let’s do this! 🎉
+        , and we'll take it from there 😊
       </span>
     ),
   },

@@ -85,21 +85,10 @@ $list: (
 }
 
 .noTail {
-  margin-bottom: 2px;
-  border-radius: 9999px; // Fully rounded corners
-  padding: 0 16px; // Remove vertical padding, keep horizontal padding
-  height: 32px; // Set a fixed height for single-line messages
-  display: flex;
-  align-items: center; // Vertically center the content
-
+  margin-bottom: 8px;
+  border-radius: 9999px;
   &:before,
   &:after {
-    display: none; // Hide tail elements completely
+    opacity: 0;
   }
-}
-
-// Adjust the font size and line height for text inside noTail messages
-.noTail span {
-  font-size: 16px; // Adjust this value as needed
-  line-height: 1; // Remove any additional line height
 }
