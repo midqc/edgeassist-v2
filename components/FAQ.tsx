@@ -135,14 +135,20 @@ export default function FAQ() {
         ))}
       </div>
       {openItems.length > 0 && (
-        <div className="text-left mt-4">
+        <motion.div
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -10 }}
+          transition={{ duration: 0.3 }}
+          className="mt-4" // Ensure margin is applied only when needed
+        >
           <button
             onClick={collapseAll}
-            className="text-sm text-black hover:text-gray-700"
+            className="text-sm text-black hover:text-gray-700 hover:underline transition-all duration-300"
           >
             Collapse All
           </button>
-        </div>
+        </motion.div>
       )}
     </section>
   );
