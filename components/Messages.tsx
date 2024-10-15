@@ -61,7 +61,14 @@ const variants = {
   }),
 };
 
-const MessageItem = ({ text, sent, i, noTail }) => {
+interface MessageItemProps {
+  text: React.ReactNode;
+  sent: boolean;
+  i: number;
+  noTail: boolean;
+}
+
+const MessageItem = ({ text, sent, i, noTail }: MessageItemProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
 
@@ -88,7 +95,7 @@ const Messages = (): JSX.Element => (
   <section className=" mx-auto rounded-3xl shadow-2xl bg-white p-8">
     <AnimatePresence>
       <ol className={styles.list}>
-        {messages.map(({ text, sent }, i) => {
+        {messages.map(({ text, sent = false }, i) => {
           const isLast = i === messages.length - 1;
           const noTail = !isLast && messages[i + 1]?.sent === sent;
 
