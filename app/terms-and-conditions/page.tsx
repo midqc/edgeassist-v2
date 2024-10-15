@@ -1,14 +1,10 @@
-"use client";
-
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function TermsAndConditions() {
-  const router = useRouter();
-
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-neutral-100 to-neutral-200">
-      <main className="flex flex-col max-w-2xl w-full mx-auto rounded-3xl shadow-2xl bg-white p-8 my-8">
-        <h1 className="text-4xl font-medium mb-6 text-blue-600">
+    <div className="min-h-screen bg-gradient-to-b from-neutral-100 to-neutral-200 py-6 flex flex-col items-center justify-center">
+      <main className="max-w-2xl mx-auto rounded-3xl shadow-2xl bg-white p-8">
+        <h1 className="text-3xl font-medium mb-6 text-blue-600">
           EdgeAssist Terms and Conditions
         </h1>
 
@@ -61,12 +57,9 @@ export default function TermsAndConditions() {
           </p>
         </section>
 
-        <button
-          onClick={() => router.back()}
-          className="text-blue-600 hover:underline cursor-pointer self-start mt-4"
-        >
-          Go Back
-        </button>
+        <Link href="/" className="text-blue-600 hover:underline">
+          Back to Home
+        </Link>
       </main>
     </div>
   );

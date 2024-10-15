@@ -1,10 +1,6 @@
-"use client";
-
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function PrivacyPolicy() {
-  const router = useRouter();
-
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-neutral-100 to-neutral-200">
       <main className="flex flex-col max-w-2xl w-full mx-auto rounded-3xl shadow-2xl bg-white p-8 my-8">
@@ -145,12 +141,9 @@ export default function PrivacyPolicy() {
           Policy periodically for any changes.
         </p>
 
-        <button
-          onClick={() => router.back()}
-          className="text-blue-600 hover:underline cursor-pointer self-start mt-4"
-        >
-          Go Back
-        </button>
+        <Link href="/" className="text-blue-600 hover:underline">
+          Back to Home
+        </Link>
       </main>
     </div>
   );
