@@ -74,7 +74,7 @@ export default function WhatWeDo() {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="bg-blue-50 p-6 rounded-xl flex flex-col justify-between items-center"
+            className="bg-gray-50 p-6 rounded-xl flex flex-col justify-between items-center"
           >
             <Image
               src={feature.image}
