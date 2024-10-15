@@ -10,7 +10,7 @@ const messages = [
   {
     text: "We’re all about 100% original work. Crafted by real people, no bots",
   },
-  { text: "How do I know it&#39;s personalized?", sent: true },
+  { text: "How do I know it’s personalized?", sent: true },
   {
     text: "Every piece is tailored just for you. Your secrets? Safe with us! 👀",
   },
@@ -31,7 +31,7 @@ const messages = [
         >
           form
         </a>
-        , and we&#39;ll take it from there 😊
+        , and we’ll take it from there 😊
       </span>
     ),
   },
