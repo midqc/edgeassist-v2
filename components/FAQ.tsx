@@ -144,7 +144,7 @@ export default function FAQ() {
         >
           <button
             onClick={collapseAll}
-            className="text-sm text-black hover:text-gray-700 hover:underline transition-all duration-300"
+            className="text-sm text-gray-700 hover:text-black hover:underline transition-all duration-300"
           >
             Collapse All
           </button>
