@@ -4,33 +4,38 @@ export default function WhatWeDo() {
   const features = [
     {
       title: "Plagiarism-Free Guarantee",
-      description: "100% original content, passing all plagiarism checks.",
+      description: ["100% original content, passing all plagiarism checks."],
       image: "/images/plagiarism.png",
     },
     {
       title: "AI Detection Bypass",
-      description: "Human-written content that bypasses AI detection systems.",
+      description: [
+        "Human-written content that bypasses AI detection",
+        "systems.",
+      ],
       image: "/images/ai-bypass.png",
     },
     {
       title: "Personalized Services",
-      description: "Customized projects aligned with your academic goals.",
+      description: ["Customized projects aligned with your", "academic goals."],
       image: "/images/personalized.png",
     },
     {
       title: "Confidentiality Assured",
-      description:
-        "Your privacy is our top priority, ensuring secure handling of your details.",
+      description: [
+        "Your privacy is our top priority, ensuring secure",
+        "handling of your details.",
+      ],
       image: "/images/confidentiality.png",
     },
     {
-      title: "Expert Team",
-      description: "Experienced professionals across various disciplines.",
+      title: "Professional Support",
+      description: ["Experienced experts across various disciplines."],
       image: "/images/expert-team.png",
     },
     {
       title: "Timely Delivery",
-      description: "Meeting deadlines, whether tight or flexible.",
+      description: ["Meeting deadlines, whether tight or flexible."],
       image: "/images/timely-delivery.png",
     },
   ];
@@ -43,21 +48,45 @@ export default function WhatWeDo() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {features.map((feature, index) => (
-          <div
-            key={index}
-            className="bg-gray-50 p-6 rounded-xl flex flex-col justify-between items-center"
-          >
-            <Image
-              src={feature.image}
-              alt={`${feature.title} icon`}
-              width={60}
-              height={60}
-              className="mb-4 object-contain"
-            />
-            <h3 className="text-xl font-medium mb-2 text-blue-600 text-center">
-              {feature.title}
-            </h3>
-            <p className="text-gray-700 text-center">{feature.description}</p>
+          <div key={index} className="flex flex-col items-center">
+            <div className="flex items-end">
+              <div className="w-6 h-6 bg-gray-50 relative">
+                <div className="absolute right-0 bottom-0 w-6 h-6 bg-white rounded-br-lg"></div>
+              </div>
+              <div className="bg-gray-50 p-2 rounded-t-xl">
+                <Image
+                  src={feature.image}
+                  alt={`${feature.title} icon`}
+                  width={60}
+                  height={60}
+                  className="object-contain"
+                />
+              </div>
+              <div className="w-6 h-6 bg-gray-50 relative">
+                <div className="absolute left-0 bottom-0 w-6 h-6 bg-white rounded-bl-lg"></div>
+              </div>
+            </div>
+            <div className="flex items-end">
+              <div className="w-6 h-6 bg-gray-50 relative">
+                <div className="absolute right-0 bottom-0 w-6 h-6 bg-white rounded-br-lg"></div>
+              </div>
+              <h3 className="text-xl font-medium text-blue-600 text-center bg-gray-50 px-3 py-1 rounded-tl-xl rounded-tr-xl">
+                {feature.title}
+              </h3>
+              <div className="w-6 h-6 bg-gray-50 relative">
+                <div className="absolute left-0 bottom-0 w-6 h-6 bg-white rounded-bl-lg"></div>
+              </div>
+            </div>
+            <div className="flex flex-col items-center">
+              <p className="text-md text-gray-700 text-center bg-gray-50 px-3 pt-2 pb-0 rounded-xl">
+                {feature.description[0]}
+              </p>
+              {feature.description[1] && (
+                <p className="text-md text-gray-700 text-center bg-gray-50 px-3 pt-0 pb-2 rounded-b-xl">
+                  {feature.description[1]}
+                </p>
+              )}
+            </div>
           </div>
         ))}
       </div>
