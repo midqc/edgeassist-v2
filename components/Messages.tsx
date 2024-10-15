@@ -49,7 +49,8 @@ const variants = {
     opacity: 0,
     y: 50, // Start lower on the Y-axis
   },
-  enter: (i) => ({
+  enter: (i: number) => ({
+    // Explicitly type 'i' as number
     opacity: 1,
     y: 0, // Move to original position
     transition: {
