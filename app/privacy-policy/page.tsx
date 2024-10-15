@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function PrivacyPolicy() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-neutral-100 to-neutral-200">
-      <main className="flex flex-col max-w-2xl w-full mx-auto rounded-3xl shadow-2xl bg-white p-8 my-8">
+      <main className="flex flex-col max-w-4xl w-full mx-auto rounded-3xl shadow-2xl bg-white p-8 my-8">
         <h1 className="text-4xl font-medium mb-6 text-blue-600">
           EdgeAssist Privacy Policy
         </h1>

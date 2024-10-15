@@ -47,17 +47,17 @@ const faqData: FAQItem[] = [
   },
 ];
 
-const FAQItem: React.FC<{ item: FAQItem; isLast: boolean }> = ({
-  item,
-  isLast,
-}) => {
-  const [isOpen, setIsOpen] = useState(false);
-
+const FAQItem: React.FC<{
+  item: FAQItem;
+  isLast: boolean;
+  isOpen: boolean;
+  toggleOpen: () => void;
+}> = ({ item, isLast, isOpen, toggleOpen }) => {
   return (
     <div className={`py-4 ${!isLast ? "border-b border-gray-200" : ""}`}>
       <button
         className="flex justify-between items-center w-full text-left cursor-pointer"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={toggleOpen}
       >
         <span className="text-lg font-medium">{item.question}</span>
         <span className="text-2xl">
@@ -106,6 +106,18 @@ const FAQItem: React.FC<{ item: FAQItem; isLast: boolean }> = ({
 };
 
 export default function FAQ() {
+  const [openItems, setOpenItems] = useState<number[]>([]);
+
+  const toggleItem = (index: number) => {
+    setOpenItems((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
+    );
+  };
+
+  const collapseAll = () => {
+    setOpenItems([]);
+  };
+
   return (
     <section className="flex flex-col max-w-4xl w-full mx-auto rounded-3xl shadow-2xl bg-white p-8">
       <h2 className="text-3xl font-medium mb-6 text-center">
@@ -117,9 +129,21 @@ export default function FAQ() {
             key={index}
             item={item}
             isLast={index === faqData.length - 1}
+            isOpen={openItems.includes(index)}
+            toggleOpen={() => toggleItem(index)}
           />
         ))}
       </div>
+      {openItems.length > 0 && (
+        <div className="text-left mt-4">
+          <button
+            onClick={collapseAll}
+            className="text-sm text-black hover:text-gray-700"
+          >
+            Collapse All
+          </button>
+        </div>
+      )}
     </section>
   );
 }
