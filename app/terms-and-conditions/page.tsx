@@ -1,39 +1,72 @@
-import Link from 'next/link';
+"use client";
+
+import { useRouter } from "next/navigation";
 
 export default function TermsAndConditions() {
+  const router = useRouter();
+
   return (
-    <div className="min-h-screen bg-gradient-to-b from-neutral-100 to-neutral-200 py-6 flex flex-col items-center justify-center">
-      <main className="max-w-2xl mx-auto rounded-3xl shadow-2xl bg-white p-8">
-        <h1 className="text-3xl font-medium mb-6 text-blue-600">EdgeAssist Terms and Conditions</h1>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-neutral-100 to-neutral-200">
+      <main className="flex flex-col max-w-2xl w-full mx-auto rounded-3xl shadow-2xl bg-white p-8 my-8">
+        <h1 className="text-4xl font-medium mb-6 text-blue-600">
+          EdgeAssist Terms and Conditions
+        </h1>
 
         <section className="mb-6">
           <h2 className="text-2xl font-medium mb-2">General Usage Policy</h2>
-          <p className='text-gray-600'>By accessing and using EdgeAssist&apos;s services, users agree to comply with these Terms and Conditions. If you do not agree to these terms, you may not use our services.</p>
+          <p className="text-gray-600">
+            By accessing and using EdgeAssist&apos;s services, users agree to
+            comply with these Terms and Conditions. If you do not agree to these
+            terms, you may not use our services.
+          </p>
         </section>
 
         <section className="mb-6">
-          <h2 className="text-2xl font-medium mb-2">User Rights and Responsibilities</h2>
-          <p className='text-gray-600'>Users are responsible for providing accurate information when using the services. Users must also adhere to all applicable laws and regulations while using EdgeAssist&apos;s services.</p>
+          <h2 className="text-2xl font-medium mb-2">
+            User Rights and Responsibilities
+          </h2>
+          <p className="text-gray-600">
+            Users are responsible for providing accurate information when using
+            the services. Users must also adhere to all applicable laws and
+            regulations while using EdgeAssist&apos;s services.
+          </p>
         </section>
 
         <section className="mb-6">
           <h2 className="text-2xl font-medium mb-2">Intellectual Property</h2>
-          <p className='text-gray-600'>All content, trademarks, and other intellectual property associated with EdgeAssist&apos;s services are owned by EdgeAssist. Users may not reproduce or distribute any content without prior written permission.</p>
+          <p className="text-gray-600">
+            All content, trademarks, and other intellectual property associated
+            with EdgeAssist&apos;s services are owned by EdgeAssist. Users may
+            not reproduce or distribute any content without prior written
+            permission.
+          </p>
         </section>
 
         <section className="mb-6">
           <h2 className="text-2xl font-medium mb-2">Limitation of Liability</h2>
-          <p className='text-gray-600'>EdgeAssist shall not be liable for any damages arising from the use of its services. This includes, but is not limited to, direct, indirect, incidental, or consequential damages.</p>
+          <p className="text-gray-600">
+            EdgeAssist shall not be liable for any damages arising from the use
+            of its services. This includes, but is not limited to, direct,
+            indirect, incidental, or consequential damages.
+          </p>
         </section>
 
         <section className="mb-6">
           <h2 className="text-2xl font-medium mb-2">Dispute Resolution</h2>
-          <p className='text-gray-600'>In the event of a dispute, users agree to first attempt to resolve the matter informally with EdgeAssist. If an informal resolution is not possible, users agree to pursue mediation before seeking legal action.</p>
+          <p className="text-gray-600">
+            In the event of a dispute, users agree to first attempt to resolve
+            the matter informally with EdgeAssist. If an informal resolution is
+            not possible, users agree to pursue mediation before seeking legal
+            action.
+          </p>
         </section>
 
-        <Link href="/" className="text-blue-600 hover:underline">
-          Back to Home
-        </Link>
+        <button
+          onClick={() => router.back()}
+          className="text-blue-600 hover:underline cursor-pointer self-start mt-4"
+        >
+          Go Back
+        </button>
       </main>
     </div>
   );

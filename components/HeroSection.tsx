@@ -1,17 +1,17 @@
-import Image from 'next/image';
+import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <main className="flex flex-col  items-center justify-center mx-auto rounded-3xl shadow-2xl bg-white p-8">
+    <main className="flex flex-col max-w-4xl items-center justify-center mx-auto rounded-3xl shadow-2xl bg-white p-8">
       <div className="w-full text-center">
-      <div className='relative h-24 mx-auto mb-6'>
-        <Image
-          src="/logo-outline.svg"
-          alt="Edge Assist Logo"
-          layout="fill" 
-          objectFit="contain"
-        />
-      </div>
+        <div className="relative h-24 mx-auto mb-6">
+          <Image
+            src="/logo-outline.svg"
+            alt="Edge Assist Logo"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
         <h1 className="text-5xl font-medium mb-4">
           Expert Support for Assignments, Projects & Papers at EdgeAssist.
         </h1>

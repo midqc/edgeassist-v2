@@ -1,7 +1,7 @@
-import HeroSection from '../components/HeroSection';
-import WhatWeDo from '../components/WhatWeDo';
-import FAQ from '../components/FAQ';
-import Footer from '../components/Footer';
+import HeroSection from "../components/HeroSection";
+import WhatWeDo from "../components/WhatWeDo";
+import FAQ from "../components/FAQ";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
