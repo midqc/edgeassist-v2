@@ -74,13 +74,13 @@ export default function WhatWeDo() {
         {features.map((feature, index) => (
           <div
             key={index}
-            className="bg-gray-50 p-6 rounded-xl flex flex-col justify-between items-center"
+            className="bg-blue-50 p-6 rounded-xl flex flex-col justify-between items-center"
           >
             <Image
               src={feature.image}
               alt={`${feature.title} icon`}
-              width={64}
-              height={64}
+              width={80}
+              height={80}
               className="mb-4 object-contain"
             />
             <h3 className="text-xl font-medium mb-2 text-blue-600 text-center">

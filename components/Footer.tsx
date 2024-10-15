@@ -39,7 +39,7 @@ export default function Footer() {
             Terms & Conditions
           </Link>
           <Link
-            href="/privacy-policy" // Link to the Privacy Policy page
+            href="/privacy-policy"
             className="block text-blue-600 hover:underline"
           >
             Privacy Policy
