@@ -1,12 +1,12 @@
 "use client";
 
 import { motion, AnimatePresence, useInView } from "framer-motion";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import cn from "classnames";
 import styles from "./messages.module.scss";
 
 const messages = [
-  { text: "Hey, Why should I pick YOU? 😒", sent: true },
+  { text: "Hey, why should I choose you? 😒", sent: true },
   {
     text: "We’re all about 100% original work. Crafted by real people, no bots",
   },
@@ -18,7 +18,7 @@ const messages = [
   {
     text: "Absolutely! We’re all about punctuality—no stress about deadlines!",
   },
-  { text: "Alright, Where do I start?", sent: true },
+  { text: "Alright, where do I start?", sent: true },
   {
     text: (
       <span>
@@ -31,7 +31,7 @@ const messages = [
         >
           form
         </a>
-        , and we’ll take it from there 😊
+        , and we’ll handle the rest 😊
       </span>
     ),
   },
@@ -71,6 +71,11 @@ interface MessageItemProps {
 const MessageItem = ({ text, sent, i, noTail }: MessageItemProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.5 });
+  const [tapped, setTapped] = useState(false);
+
+  const handleTap = () => {
+    setTapped(!tapped);
+  };
 
   return (
     <motion.li
@@ -78,13 +83,16 @@ const MessageItem = ({ text, sent, i, noTail }: MessageItemProps) => {
       className={cn(
         styles.shared,
         sent ? styles.sent : styles.received,
-        noTail && styles.noTail
+        noTail && styles.noTail,
+        "select-none", // Keep this class
+        tapped && "opacity-50" // Keep this class for tapped state
       )}
       initial="initial"
       animate={isInView ? "enter" : "initial"}
       custom={i}
       variants={variants}
       layout
+      onClick={handleTap}
     >
       {text}
     </motion.li>
