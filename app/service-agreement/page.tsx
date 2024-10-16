@@ -1,12 +1,15 @@
 import Link from "next/link";
-
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 export default function ServiceAgreement() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-neutral-100 to-neutral-200 py-6 flex flex-col items-center justify-center">
-      <main className="max-w-2xl mx-auto rounded-3xl shadow-2xl bg-white p-8">
-        <h1 className="text-3xl font-medium mb-6 text-blue-600">
-          EdgeAssist Service Agreement
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-neutral-100 to-neutral-200 gap-6">
+      <Navbar />
+      <main className="flex flex-col max-w-3xl w-full mx-auto rounded-3xl bg-white p-8">
+        <h1 className="text-4xl font-medium mb-6 text-black text-center">
+          Service Agreement
         </h1>
+        <p className="mb-2 text-gray-600">Effective Date: [Insert Date]</p>
 
         <section className="mb-6">
           <h2 className="text-2xl font-medium mb-2">
@@ -107,7 +110,7 @@ export default function ServiceAgreement() {
           </p>
         </section>
 
-        <section className="mb-6">
+        <section className="">
           <h2 className="text-2xl font-medium mb-2">Limitation of Liability</h2>
           <p className="text-gray-600">
             EdgeAssist will not be liable for any indirect, incidental, or
@@ -117,11 +120,8 @@ export default function ServiceAgreement() {
             service.
           </p>
         </section>
-
-        <Link href="/" className="text-blue-600 hover:underline">
-          Back to Home
-        </Link>
       </main>
+      <Footer />
     </div>
   );
 }

@@ -1,13 +1,18 @@
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
 export default function PrivacyPolicy() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-neutral-100 to-neutral-200">
-      <main className="flex flex-col max-w-2xl w-full mx-auto rounded-3xl shadow-2xl bg-white p-8 my-8">
-        <h1 className="text-4xl font-medium mb-6 text-blue-600">
-          EdgeAssist Privacy Policy
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-neutral-100 to-neutral-200 gap-6">
+      <Navbar />
+      <main className="flex flex-col max-w-3xl w-full mx-auto rounded-3xl bg-white p-8">
+        <h1 className="text-4xl font-medium mb-6 text-black text-center">
+          Privacy Policy
         </h1>
-        <p className="mb-2 text-gray-600">Effective Date: October 14, 2024</p>
+        <p className="mb-2 text-gray-600 text-center">
+          Effective Date: October 14, 2024
+        </p>
 
         <h2 className="text-2xl font-medium mt-6 mb-2">1. Introduction</h2>
         <p className="mb-2 text-gray-600">
@@ -134,17 +139,14 @@ export default function PrivacyPolicy() {
         <h2 className="text-2xl font-medium mt-6 mb-2">
           9. Changes to This Privacy Policy
         </h2>
-        <p className="mb-6 text-gray-600">
+        <p className=" text-gray-600">
           We may update our Privacy Policy from time to time. We will notify you
           of any changes by posting the new Privacy Policy on this page and
           updating the effective date. We encourage you to review this Privacy
           Policy periodically for any changes.
         </p>
-
-        <Link href="/" className="text-blue-600 hover:underline">
-          Back to Home
-        </Link>
       </main>
+      <Footer />
     </div>
   );
 }

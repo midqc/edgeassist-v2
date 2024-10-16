@@ -92,7 +92,7 @@ const MessageItem = ({ text, sent, i, noTail }: MessageItemProps) => {
 };
 
 const Messages = (): JSX.Element => (
-  <section className="mx-auto rounded-3xl shadow-2xl bg-white p-8 sm:rounded-[47.73px]">
+  <section className="mx-auto rounded-3xl bg-white p-8 sm:rounded-[47.73px]">
     <AnimatePresence>
       <ol className={styles.list}>
         {messages.map(({ text, sent = false }, i) => {

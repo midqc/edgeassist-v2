@@ -119,7 +119,7 @@ export default function FAQ() {
   };
 
   return (
-    <section className="flex flex-col max-w-3xl w-full mx-auto rounded-3xl shadow-2xl bg-white p-8">
+    <section className="flex flex-col max-w-3xl w-full mx-auto rounded-3xl bg-white p-8">
       <h2 className="text-3xl font-medium mb-6 text-center">
         Frequently Asked Questions
       </h2>
@@ -144,7 +144,7 @@ export default function FAQ() {
         >
           <button
             onClick={collapseAll}
-            className="text-sm text-gray-700 hover:text-black hover:underline transition-all duration-300"
+            className="text-sm text-black hover:text-gray-700 hover:underline transition-all duration-300"
           >
             Collapse All
           </button>

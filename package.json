@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:tunnel": "concurrently \"next dev\" \"lt --port 3000\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -24,5 +25,9 @@
     "sass": "^1.79.5",
     "tailwindcss": "3.4.1",
     "typescript": "5.3.3"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "localtunnel": "^2.0.2"
   }
 }
