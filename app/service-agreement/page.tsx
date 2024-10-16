@@ -9,8 +9,6 @@ export default function ServiceAgreement() {
         <h1 className="text-4xl font-medium mb-6 text-black text-center">
           Service Agreement
         </h1>
-        <p className="mb-2 text-gray-600">Effective Date: [Insert Date]</p>
-
         <section className="mb-6">
           <h2 className="text-2xl font-medium mb-2">
             Project Information Accuracy

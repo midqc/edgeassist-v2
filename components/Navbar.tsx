@@ -39,15 +39,11 @@ const Navbar = () => {
   return (
     <>
       {/* Spacer div to prevent content from going behind the navbar */}
-      <div
-        className="flex max-w-xl w-full items-center justify-between mx-auto rounded-b-2xl
-        bg-white py-4 px-8 mb-6"
-      />{" "}
-      {/* Adjust the height to match your navbar */}
+      <div className="w-full max-w-xl mx-auto h-[72px] rounded-b-2xl bg-white" />
       <nav
         className={`
         fixed top-0 left-0 right-0
-        flex max-w-xl w-full items-center justify-between mx-auto rounded-b-2xl
+        flex max-w-xl w-full h-[72px] items-center justify-between mx-auto rounded-b-2xl
         bg-white py-4 px-8 transition-all duration-300
         ${isScrolled ? "backdrop-blur-md bg-white/50 z-50 shadow-sm" : "z-10"}
       `}
@@ -58,12 +54,12 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop menu */}
-        <div className="hidden md:flex space-x-4">
+        <div className="hidden md:flex space-x-6">
           {["Home", "Services", "About", "Contact"].map((item) => (
             <Link
               key={item}
               href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-              className="text-sm text-gray-600 hover:text-blue-500 transition duration-300"
+              className="text-base font-medium text-gray-600 hover:text-blue-500 transition duration-300"
             >
               {item}
             </Link>

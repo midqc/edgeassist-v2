@@ -9,8 +9,6 @@ export default function TermsAndConditions() {
         <h1 className="text-4xl font-medium mb-6 text-black text-center">
           Terms and Conditions
         </h1>
-        <p className="mb-2 text-gray-600">Effective Date: [Insert Date]</p>
-
         <section className="mb-6">
           <h2 className="text-2xl font-medium mb-2">General Usage Policy</h2>
           <p className="text-gray-600">
