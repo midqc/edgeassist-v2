@@ -45,7 +45,7 @@ const Navbar = () => {
         fixed top-0 left-0 right-0
         flex max-w-xl w-full h-[72px] items-center justify-between mx-auto rounded-b-2xl
         bg-white py-4 px-8 transition-all duration-300
-        ${isScrolled ? "backdrop-blur-md bg-white/50 z-50 shadow-sm" : "z-10"}
+        ${isScrolled ? "backdrop-blur-md bg-white/80 z-50 shadow-sm" : "z-10"}
       `}
       >
         <Link href="/" className="flex items-center space-x-3">
@@ -101,7 +101,7 @@ const Navbar = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.95 }}
                 transition={{ duration: 0.2 }}
-                className="absolute top-full right-0 mt-2 w-48 bg-white rounded-2xl shadow-2xl overflow-hidden"
+                className="absolute top-full right-0 mt-2 w-auto bg-white rounded-2xl shadow-2xl overflow-hidden"
               >
                 {["Home", "Services", "About", "Contact"].map((item) => (
                   <Link

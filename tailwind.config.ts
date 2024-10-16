@@ -8,10 +8,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      animation: {
+        'gradient-x': 'gradient-x 15s linear infinite',
+      },
+      keyframes: {
+        'gradient-x': {
+          '0%': { backgroundPosition: '200% 0' },
+          '100%': { backgroundPosition: '0 0' },
+        },
       },
     },
   },

@@ -1,4 +1,6 @@
-import Image from "next/image";
+"use client";
+
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
   return (
@@ -12,14 +14,25 @@ export default function HeroSection() {
             Custom solutions, fast delivery, and original work.
           </h2>
         </div>
-        <a
+        <motion.a
           href="https://forms.gle/oYUzB4PSu7YKFB8q7"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block text-3xl text-white bg-blue-600 py-3 px-6 rounded-xl font-medium transition-transform duration-300 ease-in-out transform hover:scale-105 active:scale-95 active:bg-blue-700"
+          className="inline-block text-3xl text-white py-3 px-6 rounded-xl font-medium relative overflow-hidden animate-gradient-x shadow-soft"
+          style={{
+            background: "linear-gradient(90deg, #2563eb, #60a5fa, #2563eb)",
+            backgroundSize: "200% 100%",
+          }}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          transition={{
+            type: "spring",
+            stiffness: 300,
+            damping: 15,
+          }}
         >
           Get Started Now
-        </a>
+        </motion.a>
       </div>
     </main>
   );
